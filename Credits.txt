@@ -5,6 +5,10 @@ Invision Power Services, Inc. is grateful to the following projects, whose work
 has been used throughout Invision Community to add style, flair and functionality
 to our product.
 
+NULLING
+	Last Updated: 10 January 2018
+	Author: IPBMafia.ru
+
 AES implementation in PHP
 	Description: Used by \IPS\Text\Encrypt to provide two-way text encryption for storing certain data.
 	Location: system/3rd_party/AES

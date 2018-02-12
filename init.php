@@ -95,8 +95,8 @@ class IPS
 			'NEXUS_LKEY_API_ALLOW_IP_OVERRIDE'	=> FALSE,
 			'UPGRADE_MANUAL_THRESHOLD'			=> 250000,
 			'HTMLENTITIES'						=> ( version_compare( phpversion(), '5.4.0', '<' ) ) ? ENT_IGNORE : ENT_DISALLOWED,
-			'SUITE_UNIQUE_KEY'					=> ( isset( $_SERVER['IPS_CIC'] ) and preg_match( '/^\/var\/www\/html\/(.+?)$/i', __DIR__, $matches ) ) ? str_replace( '/', '', $matches[1] ) : mb_substr( md5( '13_wf' . '$Rev: 3023$'), 10, 10 ),
-			'CACHEBUST_KEY'						=> mb_substr( md5( '13_wf' . '$Rev: 3023$'), 10, 10 ), // This looks unnecessary but SUITE_UNIQUE_KEY can be set to a constant constant in constants.php whereas we need a version specific constant for cache busting.
+			'SUITE_UNIQUE_KEY'					=> ( isset( $_SERVER['IPS_CIC'] ) and preg_match( '/^\/var\/www\/html\/(.+?)$/i', __DIR__, $matches ) ) ? str_replace( '/', '', $matches[1] ) : mb_substr( md5( '13_mafia' . '$Rev: 3023$'), 10, 10 ),
+			'CACHEBUST_KEY'						=> mb_substr( md5( '13_mafia' . '$Rev: 3023$'), 10, 10 ), // This looks unnecessary but SUITE_UNIQUE_KEY can be set to a constant constant in constants.php whereas we need a version specific constant for cache busting.
 			'TEXT_ENCRYPTION_KEY'				=> NULL,
 			'CONNECT_MASTER_KEY'				=> NULL,
 			'USE_DEVELOPMENT_BUILDS'			=> FALSE,

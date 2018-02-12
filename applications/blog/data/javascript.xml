@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript app="blog">
+ <file javascript_app="blog" javascript_location="front" javascript_path="controllers/browse" javascript_name="ips.browse.list.js" javascript_type="controller" javascript_version="102042" javascript_position="1000050">/**&#13;
+ * Invision Community&#13;
+ * (c) Invision Power Services, Inc. - https://www.invisioncommunity.com&#13;
+ *&#13;
+ * ips.browse.list.js - Blog browse list controller&#13;
+ *&#13;
+ * Author: Rikki Tissier&#13;
+ */&#13;
+;( function($, _, undefined){&#13;
+	&quot;use strict&quot;;&#13;
+&#13;
+	ips.controller.register('blog.front.browse.list', {&#13;
+&#13;
+		initialize: function () {&#13;
+			this.on( 'change', '[data-role=&quot;moderation&quot;]', this.selectEntry );&#13;
+		},&#13;
+&#13;
+		/**&#13;
+		 * Toggles classes when the moderation checkbox is checked&#13;
+		 *&#13;
+		 * @param	{event} 	e 		Event object&#13;
+		 * @returns {void}&#13;
+		 */&#13;
+		selectEntry: function (e) {&#13;
+			var row = $( e.currentTarget ).closest('.cBlogView_entry');&#13;
+			row.toggleClass( 'cBlogView_entrySelected', $( e.currentTarget ).is(':checked') );&#13;
+		}&#13;
+	});&#13;
+}(jQuery, _));</file>
+ <order app="global" path="/dev/js//framework/">templates&#13;
+common/ips.loader.js&#13;
+common/ui&#13;
+common/utils&#13;
+common&#13;
+controllers</order>
+ <order app="global" path="/dev/js//library/">underscore&#13;
+jquery&#13;
+mustache&#13;
+jstz&#13;
+Debug.js&#13;
+app.js</order>
+ <order app="global" path="/dev/js//library//jquery">jquery.js&#13;
+jquery.history.js&#13;
+jquery.transform.js</order>
+ <order app="global" path="/dev/js//library//linkify">linkify.min.js&#13;
+linkify-jquery.min.js</order>
+</javascript>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<javascript app="convert">
+ <file javascript_app="convert" javascript_location="admin" javascript_path="controllers/convert" javascript_name="ips.convert.menu.js" javascript_type="controller" javascript_version="102042" javascript_position="1000050">/**&#13;
+ * Invision Community&#13;
+ * (c) Invision Power Services, Inc. - https://www.invisioncommunity.com&#13;
+ *&#13;
+ * ips.convert.menu.js - &#13;
+ *&#13;
+ * Author: Ryan Ashbrook&#13;
+ */&#13;
+;( function($, _, undefined){&#13;
+	&quot;use strict&quot;;&#13;
+&#13;
+	ips.controller.register('convert.admin.convert.menu', {&#13;
+&#13;
+		initialize: function () {&#13;
+			this.on( 'click', &quot;[data-action='reConvert']&quot;, this.areYouSure );&#13;
+			this.on( 'click', &quot;[data-action='remove_converted_data']&quot;, this.removeConverted );&#13;
+		},&#13;
+		&#13;
+		areYouSure: function(e) {&#13;
+			var self = this;&#13;
+			&#13;
+			e.preventDefault();&#13;
+			&#13;
+			ips.ui.alert.show( {&#13;
+				type: 'confirm',&#13;
+				icon: 'warning',&#13;
+				message: 'Are you sure you wish to reconvert this?',&#13;
+				subText: 'Reconverting can cause data inconsistency. If you reconvert this step, you must also reconvert each step below it.',&#13;
+			} );&#13;
+		},&#13;
+		&#13;
+		removeConverted: function(e) {&#13;
+			var self = this;&#13;
+			&#13;
+			e.preventDefault();&#13;
+			&#13;
+			ips.ui.alert.show( {&#13;
+				type: 'confirm',&#13;
+				icon: 'warning',&#13;
+				message: 'Are you sure you wish to remove all converted data for this step?',&#13;
+				subText: 'Removing all converted data will remove all data that has been converted for this step. This action cannot be undone.',&#13;
+			} );&#13;
+		}&#13;
+	} );&#13;
+}(jQuery, _));</file>
+ <order app="global" path="/dev/js//framework/">templates&#13;
+common/ips.loader.js&#13;
+common/ui&#13;
+common/utils&#13;
+common&#13;
+controllers</order>
+ <order app="global" path="/dev/js//library/">underscore&#13;
+jquery&#13;
+mustache&#13;
+jstz&#13;
+Debug.js&#13;
+app.js</order>
+ <order app="global" path="/dev/js//library//jquery">jquery.js&#13;
+jquery.history.js&#13;
+jquery.transform.js</order>
+ <order app="global" path="/dev/js//library//linkify">linkify.min.js&#13;
+linkify-jquery.min.js</order>
+</javascript>

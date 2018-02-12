@@ -1,0 +1,1 @@
+;(function($,_,undefined){"use strict";ips.controller.register('blog.front.browse.list',{initialize:function(){this.on('change','[data-role="moderation"]',this.selectEntry);},selectEntry:function(e){var row=$(e.currentTarget).closest('.cBlogView_entry');row.toggleClass('cBlogView_entrySelected',$(e.currentTarget).is(':checked'));}});}(jQuery,_));;

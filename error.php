@@ -61,5 +61,6 @@
 				<button onclick="window.location.reload();" id='reload_button'>Try again</button>
 			</div>
 		</div>
+		<!-- Nulled by IPBMafia.ru -->
 	</body>
 </html>
